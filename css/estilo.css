@@ -1,0 +1,11 @@
+.logo{
+    width: 60%;
+    height: 60%;
+    margin-left: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+}
+.navbar-color{
+    background-color: #86e28c;
+}
