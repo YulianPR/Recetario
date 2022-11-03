@@ -1,7 +1,7 @@
 @import url(./vars.css);
 @import url(./utils.css);
 .logo{
-    width: 50%;
+    width: 80%;
     margin: 0rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -9,27 +9,40 @@
     background-position: left;
     background-size: contain;
 }
-.mobile-offcamvas{
+
+
+.mobile-offcanvas{
     display: block;
-    visibility: visible;
+    visibility: hidden;
     border-radius: 0;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
     width: 100%;
-    height: 35%;
+    height: 30%;
     overflow-x: hidden;
-    overflow-y: scroll;
     background-color: #86e28c;
-    transform: translateY(-0%);
-    transition: visibility 0.3s;
+    transform: translateY(-100%);
+    transition: visibility .3s ease-in-out, transform .3s ease-in-out;
 
 }
+.mobile-bar{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #86e28c;
+}
+
 .nav-bar{
     width: 100%;
-    height: 4rem;
+    height: 3.8rem;
     background-color: #86e28c;
+}
+.show-nav{
+    visibility: visible;
+    transform: translateX(0);
 }
 
 .pie{
@@ -47,7 +60,6 @@
     height: 100%;
     border-radius: 0.5rem;
 }
-.mobile-icon{
-    width: 11%;
+.mobile-icon{    
     position: relative;  
 }
