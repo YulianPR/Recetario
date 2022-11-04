@@ -7,7 +7,13 @@
     background-position: left;
     background-size: contain;
 }
-
+.footer-img{
+    width: 10rem;
+    height: fit-content;
+}
+.footer-img-container{
+    height: fit-content !important;
+}
 
 .mobile-offcanvas{
     display: block;
@@ -42,9 +48,14 @@
     visibility: visible;
     transform: translateX(0);
 }
-
+.separador{
+    width: 90%;
+    height: 0.2rem;
+    
+}
 .pie{
-    height: 100%;
+    height: fit-content;
+    width: 100%;
     background-color: #86e28c;
 }
 .info-receta{
