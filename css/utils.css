@@ -79,7 +79,11 @@ body{
 .text-left{ text-align: left; }
 
 .inner-bg{
-    background: var(--clr-yellow-100);
+    background: var(--clr-white);
+}
+
+.bg{
+    background: var(--clr-gray-100);
 }
 
 .text-light{ color: white}
@@ -116,8 +120,7 @@ body{
 }
 
 .text-content{
-    font-size: var(--fs-xsm);
-    font-weight: var(--fw-reg);
+    font-size: var(--fs-rg);
     line-height: 1.5rem;
 }
 /* gap - space between items */
