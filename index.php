@@ -11,9 +11,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/estilo.css">
 </head>
-<!-- https://www.youtube.com/watch?v=l8Hj2L7RqxQ&t=18s -->
-<!-- 56:50 -->
-
 <body>
   <header class="container p-0">
     <!-- nav menu -->
@@ -52,7 +49,7 @@
   <!-- nav menu -->
   <!-- seccion de 10 recetas -->
   <section class="m-2">
-
+  <h4 class="text-start">Recetas más votadas</h4>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -66,7 +63,7 @@
         <div class="carousel-item active">
           <img src="./img/fotos/baked-chicken-wings-in-the-asian-style.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-md-block">
-            <h5>Pollo al horno</h5> 
+            <h5>Pollo al horno.</h5> 
           </div>
         </div>
         <div class="carousel-item">
