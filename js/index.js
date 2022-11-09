@@ -1,4 +1,4 @@
-
+/* */
 const mobileSearchBar = document.querySelector('.mobile-search');
 const mobileNavBar = document.querySelector('#navbar-search');
 const mainNavBar = document.querySelector('#navbar-main');
@@ -6,6 +6,7 @@ const foodCarousel = document.querySelector('#food-carousel');
 const carouselItemWidth = document.querySelector('.multiple-item-carousel .carousel-item').offsetWidth;
 const carouselWidth = document.querySelector('.multiple-item-carousel .carousel-inner').offsetWidth;
 
+/* */
 document.addEventListener('DOMContentLoaded', function () {
   const foodCarouselWrapper = new bootstrap.Carousel(foodCarousel);
   document.querySelector('.mobile-icon').addEventListener('click', function () {
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+/* */
 function carouselNext(carouselInner) {
   let carouselScroll = carouselInner.scrollLeft;
   carouselScroll += carouselItemWidth;
@@ -56,7 +58,7 @@ function carouselNext(carouselInner) {
   }
   carouselInner.scrollBy({ left: carouselScroll, behavior: 'smooth' });
 }
-
+/* */
 function carouselPrev(carouselInner) {
   carouselScroll = carouselInner.scrollLeft;
   carouselScroll -= carouselItemWidth;

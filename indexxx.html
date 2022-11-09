@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <header class="container p-0">
+  <header class="container-fluid p-0">
     <!-- nav menu -->
     <nav class="nav-bar navbar navbar-expand-xxl">
       <div class="col flex-sm-column footer-img-container">
@@ -66,6 +66,7 @@
   <!-- seccion de recetas en carrusel -->
 
   <div id="food-carousel" class="carousel slide mt-2" data-bs-ride="false" data-bs-interval="false">
+    <h3 class="text-start" id="seccion-recetas">Recetas</h3>
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#food-carousel" data-bs-slide-to="0" class="active" aria-current="true"
         aria-label="Slide 1"></button>
@@ -105,12 +106,9 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  <!-- carrusel -->
 
-
-
-  <!-- imagen con nombre de tipo carrusel -->
-  <!-- recetas -->
-
+  <!-- Categorias -->
   <div id="recipes-carousel" class="carousel multiple-item-carousel" data-bs-ride="false" data-bs-interval="false">
     <h3 class="text-start" id="seccion-categorias">Categorias</h3>
     <div class="carousel-inner">
@@ -122,56 +120,76 @@
         <img src="./img/Merienda.jpg" class="img-fluid img-photo" alt="Merienda">
         <h5>Merienda</h5>
       </div>
-      <div class="carousel-item">  
-          <img src="./img/Almuerzo.jpg" class="img-fluid img-photo" alt="Almuerso">
-          <h5>Almuerso</h5>    
+      <div class="carousel-item">
+        <img src="./img/Almuerzo.jpg" class="img-fluid img-photo" alt="Almuerso">
+        <h5>Almuerso</h5>
       </div>
-      <div class="carousel-item">  
-          <img src="./img/Cena.jpg" class="img-fluid img-photo" alt="Cena">
-          <h5>Cena</h5>   
+      <div class="carousel-item">
+        <img src="./img/Cena.jpg" class="img-fluid img-photo" alt="Cena">
+        <h5>Cena</h5>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#recipes-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#recipes-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="carousel-item ">
+        <img src="./img/Merienda.jpg" class="img-fluid img-photo" alt="Merienda">
+        <h5>Merienda</h5>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/Almuerzo.jpg" class="img-fluid img-photo" alt="Almuerso">
+        <h5>Almuerso</h5>
+      </div>
+      
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#recipes-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#recipes-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Categorias -->
 
-
-    <div id="category-carousel" class="carousel multiple-item-carousel" data-bs-ride="false" data-bs-interval="false"
-      data-bs-pause="true">
-      <h3 class="text-start" id="seccion-tips">Ocasiones</h3>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./img/Navidad.jpg" class="img-fluid img-photo" alt="">
-            <h4>Navidad</h4>
-        </div>
-        <div class="carousel-item ">
-          <img src="./img/Halloween.png" class="img-fluid img-photo" alt="">
-            <h4>Halloween</h4>
-        </div>
-        <div class="carousel-item">
-          <img src="./img/Cumple.jpg" class="img-fluid img-photo" alt="">
-            <h4>Cumpleaños</h4>
-        </div>
+  <!-- Ocaciones -->
+  <div id="category-carousel" class="carousel multiple-item-carousel" data-bs-ride="false" data-bs-interval="false"
+    data-bs-pause="true">
+    <h3 class="text-start" id="seccion-tips">Ocasiones</h3>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/Navidad.jpg" class="img-fluid img-photo" alt="">
+        <h4>Navidad</h4>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#category-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#category-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="carousel-item ">
+        <img src="./img/Halloween.png" class="img-fluid img-photo" alt="">
+        <h4>Halloween</h4>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/Cumple.jpg" class="img-fluid img-photo" alt="">
+        <h4>Cumpleaños</h4>
+      </div>
+      <div class="carousel-item ">
+        <img src="./img/Halloween.png" class="img-fluid img-photo" alt="">
+        <h4>Halloween</h4>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/Cumple.jpg" class="img-fluid img-photo" alt="">
+        <h4>Cumpleaños</h4>
+      </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#category-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#category-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Ocaciones -->
 
-    <section>
-      <!-- recetas -->
-      <!-- Categorias -->
-      <!-- <div class="container">
+  
+    <!-- recetas -->
+    <!-- Categorias -->
+    <!-- <div class="container">
         <h3 class="text-start" id="seccion-categorias">Categorias</h3>
         <div class="row">
           <div class="col">
@@ -212,10 +230,11 @@
         </div>
       </div>
     </section> -->
-    <!-- Ocasiones -->
+    
+
     <!-- pie de pagina con logo y redes sociales -->
     <footer class="text-white">
-      <div class="container p-0">
+      <div class="container-fluid p-0">
         <div class="row pie m-0">
           <div class="col footer-img-container">
             <img class="footer-img ml-1 mt-2" src="./img/logob.png" alt="">
@@ -250,6 +269,7 @@
       crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="./js/index.js"></script>
+  
 </body>
 
 </html>
