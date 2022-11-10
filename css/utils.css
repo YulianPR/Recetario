@@ -82,6 +82,20 @@ body{
     background: var(--clr-white);
 }
 
+.bg-green{
+    background: var(--clr-green-100);
+}
+
+.bg-yellow{
+    background: var(--clr-yellow-100);
+}
+
+.inner-bg-conf{
+    width: 75%;
+    margin: auto;
+    border-radius: 1.25rem;
+}
+
 .bg{
     background: var(--clr-gray-100);
 }
