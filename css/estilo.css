@@ -1,7 +1,50 @@
-@import url(./vars.css);
-@import url(./utils.css);
+h5 {
+    width: 100%;
+    height: 50px;
+    background-color: #8cfca4;
+    color: #fff;
+    border-radius: 0 0 1.25rem 1.25rem;
+    text-align: center;
+    font-size: small;
+    padding-top: .25rem;
+}
 
-.logo{
+.btn-line-carrusel {
+    width: 6rem;
+    height: 1rem;
+    background-color: rgba(132, 132, 132, 0.622);
+    border-radius: 1.25rem;
+    opacity: 1;
+}
+
+.btn-line-carrusel:hover {
+    background-color: rgba(0, 0, 0, 0.811);
+}
+
+.btn-carrusel {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(132, 132, 132, 0.622);
+    border-radius: 1.25rem;
+    opacity: 1;
+}
+
+.btn-carrusel:hover {
+    background-color: rgba(0, 0, 0, 0.811);
+}
+
+.img-photo {
+    border-radius: 1.25rem 1.25rem 0 0;
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+}
+
+.img-bottom {
+    border-radius: 0 0 1.25rem 1.25rem;
+}
+
+.logo {
     width: 80%;
     margin: 0rem;
     margin-left: 0.5rem;
@@ -9,10 +52,24 @@
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
+    opacity: 0.9;
 }
 
+.logo:hover {
+    width: 83%;
+    opacity: 1;
+}
 
-.mobile-offcanvas{
+.footer-img {
+    width: 10rem;
+    height: fit-content;
+}
+
+.footer-img-container {
+    height: fit-content !important;
+}
+
+.mobile-offcanvas {
     display: block;
     visibility: hidden;
     border-radius: 0;
@@ -23,44 +80,143 @@
     width: 100%;
     height: 30%;
     overflow-x: hidden;
-    background-color: #86e28c;
+    background-color: #8cfca4;
     transform: translateY(-100%);
     transition: visibility .3s ease-in-out, transform .3s ease-in-out;
 
 }
-.mobile-bar{
+
+.mobile-bar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #8cfca4;
+}
+
+.mobile-search {
+    display: none;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 15%;
+    background-color: #8cfca4;
+    transform: translateY(-100%);
+    transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+}
+
+/*
+.mobile-search{
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background: #86e28c;
 }
-
-.nav-bar{
+ */
+.nav-bar {
     width: 100%;
     height: 3.8rem;
-    background-color: #86e28c;
+    background-color: #8cfca4;
 }
-.show-nav{
+
+.search-bar {
+    width: 100%;
+    height: 3.8rem;
+    background-color: #8cfca4;
+}
+
+.show-nav {
     visibility: visible;
+    display: block;
     transform: translateX(0);
 }
 
-.pie{
-    height: 100%;
-    background-color: #86e28c;
+.separador {
+    width: 90%;
+    height: 0.2rem;
+
 }
-.info-receta{
+
+.pie {
+    height: fit-content;
+    width: 100%;
+    background-color: #8cfca4;
+}
+
+.info-receta {
     width: 7rem;
     height: 12rem;
-    background-color: #86e28c;
+    background-color: #8cfca4;
     border-radius: 0.5rem;
 }
-.img-receta{
+
+.img-receta {
     width: 100%;
     height: 100%;
     border-radius: 0.5rem;
 }
-.mobile-icon{    
-    position: relative;  
+
+.mobile-icon {
+    position: relative;
+}
+
+.mobile-icon:hover {
+    position: relative;
+    transform: scale(1.2);
+}
+
+.mobile-icon-search {
+    position: relative;
+}
+
+.mobile-icon-search:hover {
+    position: relative;
+    transform: scale(1.2);
+}
+
+.multiple-item-carousel .carousel-control-prev,
+.multiple-item-carousel .carousel-control-next {
+    width: 3rem;
+    height: 3rem;
+    margin: auto 0;
+    border-radius: 99999px;
+    background: rgba(3, 3, 3, 0.433);
+    z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+
+    .multiple-item-carousel {
+        margin-top: 5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .multiple-item-carousel .carousel-inner {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .multiple-item-carousel .carousel-item {
+        flex: 0 0 30%;
+        margin-right: 0;
+        display: block;
+    }
+
+    .multiple-item-carousel .carousel-item img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+    }
+
+    .multiple-item-carousel .carousel-control-prev,
+    .multiple-item-carousel .carousel-control-next {
+        width: 5rem;
+        height: 5rem;
+    }
+
 }
