@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
@@ -44,11 +44,10 @@
       </div>
       <div class="mobile-search">
         <div id="navbar-search" class="mobile">
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Buscar</a>
-            </li>
-          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
         </div>
       </div>
       <div class="row flex-sm-column-reverse">
@@ -68,8 +67,7 @@
   <div id="food-carousel" class="carousel slide mt-2" data-bs-ride="false" data-bs-interval="false">
     <h3 class="text-start" id="seccion-recetas">Recetas</h3>
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#food-carousel" data-bs-slide-to="0" class="active" aria-current="true"
-        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#food-carousel" data-bs-slide-to="0" class="active" aria-current="true"aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#food-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#food-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
@@ -107,8 +105,8 @@
     </button>
   </div>
   <!-- carrusel -->
-
-  <!-- Categorias -->
+  <section class="container">
+    <!-- Categorias -->
   <div id="recipes-carousel" class="carousel multiple-item-carousel" data-bs-ride="false" data-bs-interval="false">
     <h3 class="text-start" id="seccion-categorias">Categorias</h3>
     <div class="carousel-inner">
@@ -135,8 +133,7 @@
       <div class="carousel-item">
         <img src="./img/Almuerzo.jpg" class="img-fluid img-photo" alt="Almuerso">
         <h5>Almuerso</h5>
-      </div>
-      
+      </div>      
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#recipes-carousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -159,7 +156,7 @@
         <h4>Navidad</h4>
       </div>
       <div class="carousel-item ">
-        <img src="./img/Halloween.png" class="img-fluid img-photo" alt="">
+        <img src="./img/Holloween.jpg" class="img-fluid img-photo" alt="">
         <h4>Halloween</h4>
       </div>
       <div class="carousel-item">
@@ -167,7 +164,7 @@
         <h4>Cumpleaños</h4>
       </div>
       <div class="carousel-item ">
-        <img src="./img/Halloween.png" class="img-fluid img-photo" alt="">
+        <img src="./img/Holloween.jpg" class="img-fluid img-photo" alt="">
         <h4>Halloween</h4>
       </div>
       <div class="carousel-item">
@@ -185,6 +182,8 @@
     </button>
   </div>
   <!-- Ocaciones -->
+  </section>
+  
 
   
     <!-- recetas -->
