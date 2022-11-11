@@ -27,11 +27,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Se obtiene el botón de busqueda de mobile para mostrar el navbar de busqueda cuando se le da click
-  document.querySelector('.mobile-icon-search').addEventListener('click', function () {
-    mobileNavBar.classList.add('show-nav');
-    mobileSearchBar.classList.add('show-nav');
+
+  document.querySelector("#search-btn").addEventListener('click', function () {
+    document.getElementById("check-search").checked = false;
   });
+  // Se obtiene el botón de busqueda de mobile para mostrar el navbar de busqueda cuando se le da click
+  // document.querySelector('.mobile-icon-search').addEventListener('click', function () {
+  //   mobileNavBar.classList.add('show-nav');
+  //   mobileSearchBar.classList.add('show-nav');
+  // });
 
   // Cada vez que se presiona un link se oculta el navbar de busqueda
   document.querySelectorAll('.nav-link').forEach(function (el) {

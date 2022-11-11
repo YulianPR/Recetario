@@ -62,10 +62,11 @@ h5 {
     background-position: left;
     background-size: contain;
     opacity: 0.9;
+    transition: transform .1s ease-in; 
 }
 
 .logo:hover {
-    width: 83%;
+    transform: scale(1.2);
     opacity: 1;
 }
 
@@ -171,7 +172,7 @@ h5 {
 }
 
 .mobile-icon {
-    position: relative;
+   
 }
 
 .mobile-icon:hover {
@@ -198,6 +199,40 @@ h5 {
     z-index: 1;
 }
 
+
+
+.pos-rel{
+    position: relative;
+    justify-content: space-between;
+}
+
+#search-label img {
+    z-index: 2;
+}
+.search-container {
+    display: flex;
+    background-color: #8cfca4;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition: transform 200ms ease-in-out;
+}	
+ 
+#check-search:checked + .search-container  {
+    transform: translateY(0);
+}
+.navbar-buttons{
+    margin: 0;
+}
+ 
 @media screen and (min-width: 768px) {
 
     .multiple-item-carousel {
