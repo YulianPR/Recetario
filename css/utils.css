@@ -68,19 +68,9 @@ body{
     flex: 0 0 auto;
     width: 100%;
 }
-/* layout */
-.opacity-10{ opacity: 10%; }
-.opacity-20{ opacity: 20%; }
-.opacity-40{ opacity: 40%; }
-.opacity-60{ opacity: 60%; }
-.opacity-60{ opacity: 80%; }
 
 .text-center{ text-align: center; }
 .text-left{ text-align: left; }
-
-.inner-bg{
-    background: var(--clr-white);
-}
 
 .bg-green{
     background: var(--clr-green-100);
@@ -99,9 +89,6 @@ body{
 .bg{
     background: var(--clr-gray-100);
 }
-
-.text-light{ color: white}
-.text-dark{ color: var(--clr-blue-200); }
 
 .title-sm{
     font-size: var(--fs-xsm);
@@ -128,15 +115,11 @@ body{
     font-weight: var(--fw-bold);
 }
 
-.no-link{
-    color: var(--clr-white);
-    text-decoration: none;
-}
-
 .text-content{
     font-size: var(--fs-rg);
     line-height: 1.5rem;
 }
+
 /* gap - space between items */
 .gap-1{ gap: calc(var(--fs-xsm) * var(--spacer-xsm)); }
 .gap-2{ gap: calc(var(--fs-xsm) * var(--spacer-sm)); }
@@ -283,81 +266,6 @@ body{
     width: 15%;
 }
 
-.badge{
-    display:inline-flex;
-    border-radius: 1.25rem;
-    padding: 0.625rem 1.25rem;
-    font-size: var(--fs-sm);
-}
-
 .curved{
     border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
 }
-
-.curved-btn{
-    display:inline-flex;
-    border-radius: 1.25rem 1.25rem 1.25rem .25rem;
-    border-width: .20rem;
-    border-style: solid;
-    padding: 0.625rem 1.25rem;
-    font-size: var(--fs-rg);
-    font-weight: var(--fw-med);
-    text-decoration: none;
-    transition: .5s;
-}
-
-.curved-blue{
-    border-color: var(--clr-blue-200);
-    background: var(--clr-blue-200);
-}
-
-.curved-blue:hover{
-    border-color: var(--clr-white);
-    background: transparent;
-}
-
-.testimonial{
-    background: var(--clr-blue-400);
-    border-radius: 1.25rem 1.25rem 1.25rem .5rem;
-}
-
-.rotate-180{ transform: rotate(180deg);}
-.rotate-135{ transform: rotate(135deg);}
-
-.circular-nav{
-    width: 3.75rem;
-    height: 3.75rem;
-    border-radius: 100%;
-    border:none;
-    background: var(--clr-blue-320);
-    cursor: pointer;
-    transition: .5s;
-}
-
-.circular-nav:hover{
-    background: var(--clr-blue-200);
-}
-
-.circular-static{
-    display: inline-flex;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 100%;
-    border:none;
-    background: var(--clr-blue-200);
-}
-
-.card{
-    border-radius: 1.25rem;
-    background: var(--clr-blue-310);
-}
-
-.overflow-hidden{
-    overflow: hidden;
-}
-
-.clip{
-    /* top, right, bottom, and left edges */
-    clip-path: inset(0px 0px 5.5rem 0px);
-    top: -5.5rem;
-}  
