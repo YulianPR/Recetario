@@ -8,7 +8,7 @@ const mainNavBar = document.querySelector('#navbar-main');
 const foodCarousel = document.querySelector('#food-carousel');
 // Variable con el grueso de cada elemento de un carousel
 const carouselItemWidth = document.querySelector('.multiple-item-carousel .carousel-item').offsetWidth;
- 
+
 /*Función que se ejecuta cuando la página se ha cargado por completo */
 document.addEventListener('DOMContentLoaded', function () {
   // Se utiliza la libreria de javascript de bootstrap para darle el funcionamiento al primer carusel
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // No queremos que las slides se muevan automaticamente, entonces desactivamos el evento que reanuda
     // el movimiento de las slides cuando el mouse deja el carousel
     el.addEventListener("mouseleave", function (el) {
-      
+
       el.target.setAttribute("data-bs-interval", "false");
     });
   });
@@ -101,8 +101,14 @@ function carouselPrev(carouselInner) {
   carouselInner.parentElement.setAttribute("data-bs-interval", "false");
   if (carouselScroll < 0) {
     carouselScroll = carouselWidth;
+
+    // ScrollBy es una función que permite mover desde programación el scroll de un contenedor
+    // Le ponemos behaviour smooth para que haga scroll de forma bonita
     carouselInner.scrollBy({ left: carouselScroll, behavior: 'smooth' });
     return
   }
   carouselInner.scrollBy({ left: -carouselItemWidth, behavior: 'smooth' });
 }
+
+
+ 
