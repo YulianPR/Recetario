@@ -61,7 +61,7 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./img/fotos/baked-chicken-wings-in-the-asian-style.jpg" class="d-block w-100" alt="...">
+          <img src="./img/fotos/baked-chicken-wings-in-the-asian-style.jpg" class="d-block img-75 curved m-auto" alt="...">
           <div class="carousel-caption d-md-block">
             <h5>Pollo al horno.</h5> 
           </div>
@@ -69,14 +69,14 @@
         <div class="carousel-item">
           <img
             src="./img/fotos/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-and-red-onion-on-wooden-table.jpg"
-            class="d-block w-100" alt="...">
+            class="d-block img-75 curved m-auto" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./img/fotos/mexican-tacos-with-beef-in-tomato-sauce-and-salsa.jpg" class="d-block w-100" alt="...">
+          <img src="./img/fotos/mexican-tacos-with-beef-in-tomato-sauce-and-salsa.jpg" class="d-block img-75 curved m-auto" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p>
@@ -98,8 +98,8 @@
 
   <!-- imagen con nombre de tipo carrusel -->
   <!-- 2 clumnas verticales de imagenes con nombre y texto -->
-  <section class="container">
-    <section class="row text-">
+  <section class="container-fluid">
+    <section class="row text">
       <div class="col-md">
         <h3 class="text-start" id="seccion-recetas">Recetas</h3>
         <div class="row">
@@ -111,23 +111,23 @@
           <div class="col">
             <img
               src="./img/fotos/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-and-red-onion-on-wooden-table.jpg"
-              class="img-fluid" alt="...">
-            <h5>Pollo al horno</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
+              class="img-fluid img-60 curved m-auto" alt="...">
+            <h5 class="text-center">Pollo al horno</h5>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <img src="./img/fotos/baked-chicken-wings-in-the-asian-style.jpg" class="img-fluid" alt="...">
-            <h5>Pollo al horno</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
+            <img src="./img/fotos/baked-chicken-wings-in-the-asian-style.jpg" class="img-fluid img-60 curved m-auto" alt="...">
+            <h5 class="text-center">Pollo al horno</h5>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
           </div>
           <div class="col">
             <img
               src="./img/fotos/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-and-red-onion-on-wooden-table.jpg"
-              class="img-fluid" alt="...">
-            <h5>Pollo al horno</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
+              class="img-fluid img-60 curved m-auto" alt="...">
+            <h5 class="text-center">Pollo al horno</h5>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
           </div>
         </div>
       </div>
@@ -141,30 +141,30 @@
       <h3 class="text-start" id="seccion-categorias">Categorias</h3>
       <div class="row">
         <div class="col">
-          <img src="./img/fotos/baked-chicken-wings-in-the-asian-style.jpg" class="img-fluid" alt="...">
-          <h5>Pollo al horno</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
+          <img src="./img/fotos/baked-chicken-wings-in-the-asian-style.jpg" class="img-fluid img-60 curved m-auto" alt="...">
+          <h5 class="text-center">Pollo al horno</h5>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
         </div>
         <div class="col">
           <img
             src="./img/fotos/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-and-red-onion-on-wooden-table.jpg"
-            class="img-fluid" alt="...">
-          <h5>Pollo al horno</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
+            class="img-fluid img-60 curved m-auto" alt="...">
+          <h5 class="text-center">Pollo al horno</h5>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <img src="./img/fotos/baked-chicken-wings-in-the-asian-style.jpg" class="img-fluid" alt="...">
-          <h5>Pollo al horno</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
+          <img src="./img/fotos/baked-chicken-wings-in-the-asian-style.jpg" class="img-fluid img-60 curved m-auto" alt="...">
+          <h5 class="text-center">Pollo al horno</h5>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
         </div>
         <div class="col">
           <img
             src="./img/fotos/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-and-red-onion-on-wooden-table.jpg"
-            class="img-fluid" alt="...">
-          <h5>Pollo al horno</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
+            class="img-fluid img-60 curved m-auto" alt="...">
+          <h5 class="text-center">Pollo al horno</h5>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
         </div>
 
       </div>
@@ -184,9 +184,9 @@
         <div class="col-6">
           <img
             src="./img/fotos/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-and-red-onion-on-wooden-table.jpg"
-            class="img-fluid" alt="...">
-          <h5>Pollo al horno</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
+            class="img-fluid img-60 curved m-auto" alt="...">
+          <h5 class="text-center">Pollo al horno</h5>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatum.</p>
         </div>
         
       </div>
