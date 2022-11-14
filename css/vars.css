@@ -24,7 +24,12 @@
     --fs-xlg: 5rem;
     /* colors */
     /*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+<<<<<<< HEAD
   
+=======
+    --clr-white: hsl(0, 0%, 100%);
+
+>>>>>>> b45936209dcaf54912e8eacab9cd70ccebe5751c
     --clr-green-100: hsla(132, 95%, 77%);
 
     --clr-yellow-100: hsla(65, 85%, 87%);
