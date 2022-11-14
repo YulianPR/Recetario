@@ -18,6 +18,7 @@ h5 {
     text-align: center;
     font-size: small;
     padding-top: .25rem;
+    
 }
 
 .btn-line-carrusel {
@@ -44,8 +45,7 @@ h5 {
     background-color: rgba(0, 0, 0, 0.811);
 }
 
-.img-photo {
-    
+.img-photo {    
     border-radius: 1.25rem 1.25rem 0 0;
     width: 100%;
     height:30rem;   
@@ -125,16 +125,6 @@ h5 {
     transition: visibility .3s ease-in-out, transform .3s ease-in-out;
 }
 
-/*
-.mobile-search{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #86e28c;
-
-}
- */
 .nav-bar {
     width: 100%;
     height: 3.8rem;
