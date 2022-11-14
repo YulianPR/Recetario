@@ -110,7 +110,7 @@
 
     <?php foreach($data as $index => $recipe): ?>
       <div class="carousel-item <?php echo $index == 0 ? 'active' : '' ?>">
-        <img src="<?php echo "./img/".$recipe["recipe_image"] ?>" class="d-block img-photo"
+        <img src="<?php echo "./img/fotos/".$recipe["recipe_image"] ?>" class="d-block img-photo"
           alt="<?php echo $recipe["recipe_name"] ?>">
         <div class="carousel-caption d-md-block">
           <h6><?php echo $recipe["recipe_name"] ?></h6>
