@@ -1,5 +1,5 @@
 <?php 
-  require './phps/db.php';
+  require 'db.php';
   
 //   [
 //     left join de categorias         
