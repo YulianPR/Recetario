@@ -20,6 +20,8 @@
     
 ]);
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,12 +104,17 @@
     <h3 class="text-start" id="seccion-recetas">Recetas</h3>
     <div class="carousel-indicators">
       <?php foreach($data as $index => $value): ?>
-      <button type="button" data-bs-target="#food-carousel" data-bs-slide-to="<?php echo $index?>" class="<?php echo $index == 0 ? 'active' : '' ?>" aria-current="<?php echo $index == 0 ? 'true' : 'false' ?>" aria-label="Slide <?php echo $index + 1?>"></button>
+    <button type="button" data-bs-target="#food-carousel" data-bs-slide-to="
+      <?php echo $index?>" class="
+      <?php echo $index == 0 ? 'active' : '' ?>" aria-current="
+      <?php echo $index == 0 ? 'true' : 'false' ?>" aria-label="Slide 
+      <?php echo $index + 1?>">
+    </button>
         <?php endforeach; ?>
     </div>
     <div class="carousel-inner">
 
-    <?php foreach($data as $index => $recipe): ?>
+        <?php foreach($data as $index => $recipe): ?>
       <div class="carousel-item <?php echo $index == 0 ? 'active' : '' ?>">
         <img src="<?php echo "./img/fotos/".$recipe["recipe_image"] ?>" class="d-block img-photo"
           alt="<?php echo $recipe["recipe_name"] ?>">

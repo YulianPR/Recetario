@@ -68,7 +68,7 @@
     </div>
   </nav>
 </header>
-  
+  <!-- img -->
   <div class="container-fluid me-5">
     <table class="table table-dark">
       <h1 class="pt-5">Tabla de Recetas</h1>
