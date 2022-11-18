@@ -9,6 +9,9 @@ const foodCarousel = document.querySelector('#food-carousel');
 // Variable con el grueso de cada elemento de un carousel
 const carouselItemWidth = document.querySelector('.multiple-item-carousel .carousel-item').offsetWidth;
 
+
+ 
+
 /*Función que se ejecuta cuando la página se ha cargado por completo */
 document.addEventListener('DOMContentLoaded', function () {
   // Se utiliza la libreria de javascript de bootstrap para darle el funcionamiento al primer carusel

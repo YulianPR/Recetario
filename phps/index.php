@@ -103,6 +103,7 @@
   <div id="food-carousel" class="carousel slide mt-2 " data-bs-ride="false" data-bs-interval="false">
     <h3 class="text-start" id="seccion-recetas">Recetas</h3>
     <div class="carousel-indicators">
+      <!-- por cada $data como $index retorne $value -->
       <?php foreach($data as $index => $value): ?>
     <button type="button" data-bs-target="#food-carousel" data-bs-slide-to="
       <?php echo $index?>" class="
@@ -113,7 +114,7 @@
         <?php endforeach; ?>
     </div>
     <div class="carousel-inner">
-
+        <!-- por cada $data como $index retorne $recipe -->
         <?php foreach($data as $index => $recipe): ?>
       <div class="carousel-item <?php echo $index == 0 ? 'active' : '' ?>">
         <img src="<?php echo "./img/fotos/".$recipe["recipe_image"] ?>" class="d-block img-photo"
