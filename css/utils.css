@@ -32,6 +32,15 @@ body{
     border-radius: 1.25rem;
 }
 
+.curved{
+    border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
+}
+
+.gap-1{ gap: calc(var(--fs-xsm) * var(--spacer-xsm)); }
+.gap-2{ gap: calc(var(--fs-xsm) * var(--spacer-sm)); }
+.gap-3{ gap: calc(var(--fs-xsm) * var(--spacer-md)); }
+.gap-4{ gap: calc(var(--fs-xsm) * var(--spacer-lg)); }
+.gap-5{ gap: calc(var(--fs-xsm) * var(--spacer-xlg)); }
 
 .ma-1{ margin: calc(var(--fs-xsm) * var(--spacer-xsm)); }
 .ma-2{ margin: calc(var(--fs-xsm) * var(--spacer-sm)); }
@@ -46,7 +55,9 @@ body{
 .mr-4{ margin-right: calc(var(--fs-xsm) * var(--spacer-lg)); }
 .mr-5{ margin-right: calc(var(--fs-xsm) * var(--spacer-xlg)); }
 
-
+.img-align{
+    align-self:center;
+}
 
 /* padding properties */
 .pa-1{ padding: calc(var(--fs-xsm) * var(--spacer-xsm)); }

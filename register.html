@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receta</title>
+    <title>Register</title>
     <link rel="stylesheet" href="./css/utils.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/estilo.css">
@@ -66,53 +66,36 @@
     
       </header>
     <!--Nav Bar-->
-    <!--Datos de la receta-->
-    <section class="container bg-green inner-bg-conf ma-5 pa-5">
+
+    <!--Registrar-->
+    <section class="container bg-green inner-bg-conf ma-5 pt-3 pb-5">
         <section class="row">
             <section class="col-4 mr-5">            
-                <img src="./img/fotos/baked-chicken-wings-in-the-asian-style-min.jpg" class="img-fluid curved ml-4" alt="Alitas de Pollo">
+                <img src="./img/logob.png" class="img-align img-fluid ml-4 mt-5" alt="Alitas de Pollo">
             </section>      
-            <section class="col row">            
-                <h1 class="text-center">Alitas de Pollo</h1>
-                <section class="col">
-                    <p>Preparación: 15 min</p>
-                    <p>Cocción: 30 min</p>
-                    <p>Tiempo Total: 45 min</p>
-                </section>
-                <section class="col pt-5">
-                    <p>Dificultad:</p>
-                </section>
+            <section class="col"> 
+                <h3 class="text-center">Registrarse</h3>           
+                <form action="">
+                    <label class="form-label" for="correo">Correo Electronico</label>
+                    <input id="correo" class="form-control" type="email" name="correo">
+        
+                    <label class="mt-1 form-label" for="password">Password</label>
+                    <input id="password" class="form-control" type="password">
+
+                    <label class="mt-1 form-label" for="password">Confirm Password</label>
+                    <input id="password" class="form-control" type="password">                    
+                        <p></p>
+                    <button class="btn btn-primary" type="submit">Registrarse</button>
+                    <label class="mr-5 ml-5" for=""></label>
+                    <button class="btn btn-primary" type="submit">Ya tiene cuenta? Inicie Sesión</button>                    
+
+                    <input type="hidden" name="id" value="123">
+
+                </form>
             </section>     
         </section>
     </section>
-    <!--Datos de la receta-->
-
-    <!--Descripción-->
-    <h2 class="text-center">Descripción</h2>
-    <section class="container bg-yellow inner-bg-conf ma-3 pa-3">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat vel aspernatur debitis corrupti facere in minima commodi est culpa. Dicta doloremque eveniet rem officiis a minus ea, impedit similique ipsa.</p>
-    </section>
-    <!--Descripción-->
-    <!--Ingredientes y Preparación-->
-    <section class="container ma-5 pa-5">
-        <section class="row">
-            <section class="col bg-yellow inner-bg-conf ma-3 pa-3">
-                <h2 class="text-center">Ingredientes</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat vel aspernatur debitis corrupti facere in minima commodi est culpa. Dicta doloremque eveniet rem officiis a minus ea, impedit similique ipsa.</p>
-            </section>
-            <section class="col bg-yellow inner-bg-conf ma-3 pa-3">
-                <h2 class="text-center">Preparación</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat vel aspernatur debitis corrupti facere in minima commodi est culpa. Dicta doloremque eveniet rem officiis a minus ea, impedit similique ipsa.</p>
-            </section>
-        </section>
-    </section>
-    <!--Ingredientes y Preparación-->
-    
-    <!-- carrusel -->
-  <section class="container">
-    <!-- Recetas Relacionadas -->
-
-  <!-- Recetas Relacionadas -->
+    <!--Registrar-->
 
     <!--Footer-->
     <footer class="text-white">
