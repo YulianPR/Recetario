@@ -115,7 +115,9 @@ $data = $database->select("tb_recipes", [
       <!-- por cada $data como $index retorne $recipe -->
       <?php foreach ($data as $index => $recipe) : ?>
         <div class="carousel-item <?php echo $index == 0 ? 'active' : '' ?>">
-          <img src="<?php echo "./img/fotos/" . $recipe["recipe_image"] ?>" class="d-block img-photo" alt="<?php echo $recipe["recipe_name"] ?>">
+        <a href="./phps/receta.php">
+        <img src="<?php echo "./img/fotos/" . $recipe["recipe_image"] ?>" class="d-block img-photo" alt="<?php echo $recipe["recipe_name"] ?>">
+        </a>
           <div class="carousel-caption d-md-block">
             <h6><?php echo $recipe["recipe_name"] ?></h6>
           </div>
@@ -159,7 +161,7 @@ $data = $database->select("tb_recipes", [
         </div>
         <div class="carousel-item ">
           <img src="./img/Merienda.jpg" class="img-fluid img-photo" alt="Merienda">
-          <h5>Merienda</h5>
+          <h5>Bebidas</h5>
         </div>
         <div class="carousel-item">
           <img src="./img/Almuerzo.jpg" class="img-fluid img-photo" alt="Almuerzo">
@@ -167,15 +169,15 @@ $data = $database->select("tb_recipes", [
         </div>
         <div class="carousel-item">
           <img src="./img/Cena.jpg" class="img-fluid img-photo" alt="Cena">
-          <h5>Cena</h5>
+          <h5>Postres</h5>
         </div>
         <div class="carousel-item ">
           <img src="./img/Merienda.jpg" class="img-fluid img-photo" alt="Merienda">
-          <h5>Merienda</h5>
+          <h5>Sopas</h5>
         </div>
         <div class="carousel-item">
           <img src="./img/Almuerzo.jpg" class="img-fluid img-photo" alt="Almuerzo">
-          <h5>Almuerzo</h5>
+          <h5>Entradas</h5>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#recipes-carousel" data-bs-slide="prev">
