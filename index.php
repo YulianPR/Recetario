@@ -20,8 +20,6 @@ $data = $database->select("tb_recipes", [
 
 ]);
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -115,7 +113,7 @@ $data = $database->select("tb_recipes", [
       <!-- por cada $data como $index retorne $recipe -->
       <?php foreach ($data as $index => $recipe) : ?>
         <div class="carousel-item <?php echo $index == 0 ? 'active' : '' ?>">
-        <a href="./phps/receta.php">
+        <a href="./phps/registro-recetas.php">
         <img src="<?php echo "./img/fotos/" . $recipe["recipe_image"] ?>" class="d-block img-photo" alt="<?php echo $recipe["recipe_name"] ?>">
         </a>
           <div class="carousel-caption d-md-block">
