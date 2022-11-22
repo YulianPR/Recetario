@@ -1,4 +1,4 @@
-// variable con el mobileSearchBar
+// variable con el mobileSearchBar 
 const mobileSearchBar = document.querySelector('.mobile-search');
 // Variable con el navBar del mobile
 const mobileNavBar = document.querySelector('#navbar-search');

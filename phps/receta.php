@@ -1,3 +1,24 @@
+<?php 
+require './db.php';
+  $id = $_GET['id'];
+  $recipe = $database->get("tb_recipes", [
+    "[>]tb_recipes_category" => ["recipe_category_id" => "id_recipe_category"], "[>]tb_recipes_complex" => ["recipe_complex_id" => "id_recipe_complex"]
+  ], [
+    "tb_recipes.id_recipe",
+    "tb_recipes.recipe_name",
+    "tb_recipes.recipe_time",
+    "tb_recipes.recipe_image",
+    "tb_recipes_category.recipe_category",
+    "tb_recipes_category.id_recipe_category",
+    'tb_recipes_complex.recipe_complex',
+    "tb_recipes.recipe_ingredients",
+    "tb_recipes.recipe_preparation",
+  
+
+  ], [
+    "tb_recipes.id_recipe" => $id,
+  ]);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,82 +26,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Receta</title>
-    <link rel="stylesheet" href="./css/utils.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/utils.css">
+       
+    
 </head>
+
 <body>
+
+ 
     <!--Nav Bar-->
-    <header class="container-fluid p-0 ">
+    <?php include './header.php'; ?>
         <!-- nav menu -->
-        <nav class="nav-bar navbar navbar-expand-xxl pos-rel">
-          <div class="col-4 flex-sm-column footer-img-container">
-            <a>
-              <img class="logo  footer-img" src="./img/logob.png" alt="Logotipo">
-            </a>
-          </div>
-          <div class="mobile-bar ">
-            <div id="navbar-main" class="mobile-offcanvas">
-              <ul class="navbar-nav align-items-center">
-                <li class="nav-item">
-                  <a class="nav-link" href="#seccion-recetas">Recetas</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#seccion-categorias">Categorias</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#seccion-tips">Ocoaciones</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mobile-search">
-            <div id="navbar-search" class="mobile">
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-              </form>
-            </div>
-          </div>
-          <div class="row navbar-buttons">
-            <div class="col-4 ">
-              <label for="check-search" id="search-label"><img src="./img/lupa.png" alt="Buscar" class="mobile-icon-search"></label>
+  
     
-              <input type="checkbox" name="" id="check-search" class="d-none">
-            
-             <div class="search-container">
-                <form class="form-inline my-0">
-                  <input class="form-control " type="Buscar" placeholder="Buscar" aria-label="Buscar">
-                  <button id="search-btn" class="btn btn-success " type="submit">Buscar</button>
-                </form>
-              </div>
-    
-           
-             </div>
-            <div class="col-4">
-              <img src="./img/menu.png" alt="Menu" class="mobile-icon">
-            </div>
-          </div>
-        </nav>
-    
-      </header>
+   
     <!--Nav Bar-->
     <!--Datos de la receta-->
     <section class="container bg-green inner-bg-conf ma-5 pa-5">
         <section class="row">
             <section class="col-4 mr-5">            
-                <img src="./img/fotos/baked-chicken-wings-in-the-asian-style-min.jpg" class="img-fluid curved ml-4" alt="Alitas de Pollo">
+                <img src="/img/fotos/<?php 
+                  echo $recipe['recipe_image'];
+                ?>" class="img-fluid curved ml-4" alt=" <?php 
+                echo $recipe['recipe_name'];
+              ?>">
             </section>      
             <section class="col row">            
-                <h1 class="text-center">Alitas de Pollo</h1>
+                <h1 class="text-center"><?php 
+                  echo $recipe['recipe_name'];
+                ?></h1>
                 <section class="col">
-                    <p>Preparación:</p>
-                    <p>Cocción:</p>
-                    <p>Tiempo Total:</p>
+                    <p>Preparación: NA</p>
+                    <p>Cocción: NA</p>
+                    <p>Tiempo Total: <?php 
+                  echo $recipe['recipe_time'];
+                ?></p>
                 </section>
                 <section class="col pt-5">
-                    <p>Dificultad:</p>
+                    <p>Dificultad:  <?php 
+                  echo $recipe['recipe_complex'];
+                ?> </p>
                 </section>
             </section>     
         </section>
@@ -90,7 +80,9 @@
     <!--Descripción-->
     <h2 class="text-center">Descripción</h2>
     <section class="container bg-yellow inner-bg-conf ma-3 pa-3">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat vel aspernatur debitis corrupti facere in minima commodi est culpa. Dicta doloremque eveniet rem officiis a minus ea, impedit similique ipsa.</p>
+        <p> <?php 
+                  echo $recipe['recipe_preparation'];
+                ?></p>
     </section>
     <!--Descripción-->
     <!--Ingredientes y Preparación-->
@@ -98,11 +90,15 @@
         <section class="row">
             <section class="col bg-yellow inner-bg-conf ma-3 pa-3">
                 <h2 class="text-center">Ingredientes</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat vel aspernatur debitis corrupti facere in minima commodi est culpa. Dicta doloremque eveniet rem officiis a minus ea, impedit similique ipsa.</p>
+                <p> <?php 
+                  echo $recipe['recipe_ingredients'];
+                ?></p>
             </section>
             <section class="col bg-yellow inner-bg-conf ma-3 pa-3">
                 <h2 class="text-center">Preparación</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat vel aspernatur debitis corrupti facere in minima commodi est culpa. Dicta doloremque eveniet rem officiis a minus ea, impedit similique ipsa.</p>
+                <p> <?php 
+                  echo $recipe['recipe_preparation'];
+                ?></p>
             </section>
         </section>
     </section>
@@ -112,7 +108,7 @@
         <div class="container-fluid p-0">
           <div class="row pie m-0">
             <div class="col footer-img-container">
-              <img class="footer-img ml-1 mt-2" src="./img/logob.png" alt="">
+              <img class="footer-img ml-1 mt-2" src="../img/logob.png" alt="">
             </div>
             <hr class="opacity-100 m-0 bg-white separador m-auto">
             <div class="col d-flex flex-column align-items-start mb-2 px-4">
@@ -138,12 +134,15 @@
           </div>
         </div>
       </footer>
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"></script>
  
-    <script src="./js/index.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous">
+      </script>
+   
+     
+ 
+    <script src="/js/index.js"></script>
 
 </body>
 </html>

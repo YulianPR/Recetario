@@ -15,8 +15,6 @@ $data = $database->select("tb_recipes", [
   "tb_recipes.recipe_image",
   "tb_recipes_category.recipe_category",
   "tb_recipes_category.id_recipe_category",
-  "tb_recipes.recipe_ingredients",
-  "tb_recipes.recipe_preparation"
 
 ]);
 
@@ -45,58 +43,9 @@ $data = $database->select("tb_recipes", [
 
 
  
-  <header class="container-fluid p-0 ">
-    <!-- nav menu -->
-    <nav class="nav-bar navbar navbar-expand-xxl pos-rel">
-      <div class="col-4 flex-sm-column footer-img-container">
-        <a>
-          <img class="logo  footer-img" src="./img/logob.png" alt="Logotipo">
-        </a>
-      </div>
-      <div class="mobile-bar ">
-        <div id="navbar-main" class="mobile-offcanvas">
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item">
-              <a class="nav-link" href="#seccion-recetas">Recetas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#seccion-categorias">Categorias</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#seccion-tips">Ocoaciones</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="mobile-search">
-        <div id="navbar-search" class="mobile">
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-          </form>
-        </div>
-      </div>
-      <div class="row navbar-buttons">
-        <div class="col-4 ">
-          <label for="check-search" id="search-label"><img src="./img/lupa.png" alt="Buscar" class="mobile-icon-search"></label>
-       
-          <input type="checkbox" name="" id="check-search" class="d-none">
-          <div class="search-container">
-            <form class="form-inline my-0">
-              <input class="form-control " type="Buscar" placeholder="Buscar" aria-label="Buscar">
-              <button id="search-btn" class="btn btn-success " type="submit">Buscar</button>
-            </form>
-          </div>
-
-
-        </div>
-        <div class="col-4">
-          <img src="./img/menu.png" alt="Menu" class="mobile-icon">
-        </div>
-      </div>
-    </nav>
-
-  </header>
+  <?php 
+  include './phps/header.php';
+  ?>
   <!-- nav menu -->
   <!-- seccion de recetas en carrusel -->
 
@@ -113,7 +62,7 @@ $data = $database->select("tb_recipes", [
       <!-- por cada $data como $index retorne $recipe -->
       <?php foreach ($data as $index => $recipe) : ?>
         <div class="carousel-item <?php echo $index == 0 ? 'active' : '' ?>">
-        <a href="./phps/registro-recetas.php">
+        <a href="<?php echo "./phps/receta.php?id=".$recipe["id_recipe"] ?>">
         <img src="<?php echo "./img/fotos/" . $recipe["recipe_image"] ?>" class="d-block img-photo" alt="<?php echo $recipe["recipe_name"] ?>">
         </a>
           <div class="carousel-caption d-md-block">
