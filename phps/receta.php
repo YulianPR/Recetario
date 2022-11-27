@@ -1,4 +1,5 @@
 <?php 
+
 require './db.php';
   $id = $_GET['id'];
   $recipe = $database->get("tb_recipes", [
