@@ -62,12 +62,14 @@ $data = $database->select("tb_recipes", [
       <?php foreach ($data as $index => $recipe) : ?>
         <div class="carousel-item <?php echo $index == 0 ? 'active' : '' ?>">
         <a href="<?php echo "./phps/receta.php?id=".$recipe["id_recipe"] ?>">
-        <img src="<?php echo "./img/fotos/" . $recipe["recipe_image"] ?>" class="d-block img-photo" alt="<?php echo $recipe["recipe_name"] ?>">
-        </a>
+        <img src="<?php echo "./img/fotos/" . $recipe["recipe_image"] ?>" class="d-block img-photo" alt="<?php echo $recipe["recipe_name"] ?>">  
+        </a>      
           <div class="carousel-caption d-md-block">
             <h6><?php echo $recipe["recipe_name"] ?></h6>
-          </div>
+            <p><?php echo $recipe["recipe_time"] ?></p>
+          </div>       
         </div>
+
       <?php endforeach; ?>
 
     </div>
@@ -87,28 +89,40 @@ $data = $database->select("tb_recipes", [
       <h3 class="text-start" id="seccion-categorias">Categorias</h3>
       <div class="carousel-inner">
         <div class="carousel-item active">
+        <a href="./phps/recetas.php">
           <img src="./img/Desayuno.jpg" class="img-fluid img-photo" alt="Desayuno">
           <h5>Desayuno</h5>
+          </a> 
         </div>
         <div class="carousel-item ">
+        <a href="./phps/recetas.php">
           <img src="./img/Merienda.jpg" class="img-fluid img-photo" alt="Merienda">
           <h5>Bebidas</h5>
+          </a>
         </div>
         <div class="carousel-item">
+        <a href="./phps/recetas.php">
           <img src="./img/Almuerzo.jpg" class="img-fluid img-photo" alt="Almuerzo">
           <h5>Almuerzo</h5>
+          </a>
         </div>
         <div class="carousel-item">
+        <a href="./phps/recetas.php">
           <img src="./img/Cena.jpg" class="img-fluid img-photo" alt="Cena">
           <h5>Postres</h5>
+          </a>
         </div>
         <div class="carousel-item ">
+        <a href="./phps/recetas.php">
           <img src="./img/Merienda.jpg" class="img-fluid img-photo" alt="Merienda">
           <h5>Sopas</h5>
+          </a>
         </div>
         <div class="carousel-item">
+        <a href="./phps/recetas.php">
           <img src="./img/Almuerzo.jpg" class="img-fluid img-photo" alt="Almuerzo">
           <h5>Entradas</h5>
+          </a>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#recipes-carousel" data-bs-slide="prev">
