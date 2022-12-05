@@ -174,3 +174,12 @@
 
 </body>
 </html>
+/////////////////////////////////html de cartas de recetas////////////////////////////
+<!-- <div class='col-3 card'>
+      <img src="../img/fotos/baked-chicken-wings-in-the-asian-style-min.jpg" class='card-img-top' alt="">
+      <div class='card-body'>
+        <h5 class='card-title'>asflkjnfe</h5>
+        <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium id non laboriosam sapiente ipsam, quaerat harum tempora molestias sed esse ut minus a ducimus provident eius! Aut odit non aperiam.</p>
+        <a href='./receta.php?id=73' class='btn btn-primary'>Ver recetas</a>
+      </div>
+    </div> -->

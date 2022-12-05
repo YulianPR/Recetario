@@ -4,7 +4,8 @@ require './db.php';
 
 $id = $_GET['id'];
 $recipe = $database->get("tb_recipes", [
-  "[>]tb_recipes_category" => ["recipe_category_id" => "id_recipe_category"], "[>]tb_recipes_complex" => ["recipe_complex_id" => "id_recipe_complex"]
+  "[><]tb_recipes_category" => ["recipe_category_id" => "id_recipe_category"], 
+  "[><]tb_recipes_complex" => ["recipe_complex_id" => "id_recipe_complex"]
 ], [
   "tb_recipes.id_recipe",
   "tb_recipes.recipe_name",
@@ -13,6 +14,7 @@ $recipe = $database->get("tb_recipes", [
   "tb_recipes.recipe_time_cooking",
   "tb_recipes.recipe_image",
   "tb_recipes.recipe_description",
+  "tb_recipes.recipes_likes",
   "tb_recipes_category.recipe_category",
   "tb_recipes_category.id_recipe_category",
   'tb_recipes_complex.recipe_complex',
@@ -56,25 +58,31 @@ $recipe = $database->get("tb_recipes", [
         <img src="/img/fotos/<?php
                               echo $recipe['recipe_image'];
                               ?>" class="img-fluid curved ml-5" alt=" <?php
-                                                        echo $recipe['recipe_name'];
-                                                        ?>">
+                                                                      echo $recipe['recipe_name'];
+                                                                      ?>">
       </section>
       <section class="col row">
         <h1 class="text-start-0 mt-4 pt-5"><?php
-                                echo $recipe['recipe_name'];
-                                ?></h1>
+                                            echo $recipe['recipe_name'];
+                                            ?></h1>
         <section class="col">
           <p>Tiempo de preparación: <?php
-                            echo $recipe['recipe_time_preparation'];
-                            ?></p>
+                                    echo $recipe['recipe_time_preparation'];
+                                    ?></p>
           <p>Tiempo de Cocción: <?php
-                            echo $recipe['recipe_time_cooking'];
-                            ?></p>
+                                echo $recipe['recipe_time_cooking'];
+                                ?></p>
           <p>Tiempo Total: <?php
                             echo $recipe['recipe_time'];
                             ?></p>
         </section>
         <section class="col pt-5">
+          <a type="button" href="likes.php?id_recipe=<?php echo $recipe["id_recipe"]; ?>" class="btn btn-primary">
+            <p>
+              <?php
+              echo "Me gusta: " . $recipe["recipes_likes"]
+              ?></p>
+          </a>
           <p>Dificultad: <?php
                           echo $recipe['recipe_complex'];
                           ?> </p>
@@ -85,9 +93,9 @@ $recipe = $database->get("tb_recipes", [
   <!--Datos de la receta-->
 
   <!--Descripción-->
-  
+
   <section class="container bg-yellow inner-bg-conf mt-5">
-  <h2 class="text-center">Descripción</h2>
+    <h2 class="text-center">Descripción</h2>
     <p> <?php
         echo $recipe['recipe_description'];
         ?></p>
@@ -112,12 +120,12 @@ $recipe = $database->get("tb_recipes", [
   </section>
   <!--Ingredientes y Preparación-->
   <!--Footer-->
-  
 
 
-  
 
-  <?php 
+
+
+  <?php
   include './footer.php';
   ?>
 

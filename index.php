@@ -13,6 +13,7 @@ $data = $database->select("tb_recipes", [
   "tb_recipes.recipe_name",
   "tb_recipes.recipe_time",
   "tb_recipes.recipe_image",
+  "tb_recipes.recipes_likes",
   "tb_recipes_category.recipe_category",
   "tb_recipes_category.id_recipe_category",
 ]);
@@ -66,7 +67,7 @@ $data = $database->select("tb_recipes", [
         </a>      
           <div class="carousel-caption d-md-block">
             <h6><?php echo $recipe["recipe_name"] ?></h6>
-            <p><?php echo $recipe["recipe_time"] ?></p>
+            <p><?php echo "Me gusta: " . $recipe["recipes_likes"] ?></p>
           </div>       
         </div>
 
