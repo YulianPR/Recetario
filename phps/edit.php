@@ -1,7 +1,7 @@
 <?php
     require 'db.php';
 
-    $categories = $database->select("tb_recipes_category","*");
+    $categories = $database->select("tb_recipes","*");
 
 if(isset($_GET)){
     $data = $database->select("tb_recipes", "*", [

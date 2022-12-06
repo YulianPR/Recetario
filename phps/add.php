@@ -1,7 +1,7 @@
 <?php
     require 'db.php';
 
-    $data = $database->select("tb_recipes_category","*");
+    $data = $database->select("tb_recipes","*");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,14 +28,14 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <form action="registro-recetas.php" method="POST">
+          <form action="response.php" method="POST">
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre de la receta</label>
               <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la receta">
             </div>
             <div class="mb-3">
               <label for="inputGroupFile01" class="form-label">Complejidad</label>
-              <select name="" id="">
+              <select name="complejidad" id="complejidad">
                 <option value="Fácil">Fácil</option>
                 <option value="Medio">Medio</option>
                 <option value="Medio">Difícil</option>
@@ -43,7 +43,7 @@
             </div>
             <div class="mb-3">
               <label for="inputGroupFile01" class="form-label">Categoria</label>
-              <select name="" id="">
+              <select name="categoria" id="categoria">
                 <option value="Desayuno">Desayuno</option>
                 <option value="Almuerzo">Almuerzo</option>
                 <option value="Sopas">Sopas</option>
@@ -53,7 +53,7 @@
             </div>
             <div class="mb-3">
               <label for="inputGroupFile01" class="form-label">Ocasión</label>
-              <select name="" id="">
+              <select name="ocasion" id="ocasion">
                 <option value="Cumpleaños">Cumpleaños</option>
                 <option value="Día del padre">Día del padre</option>
                 <option value="Día de la madre">Día de la madre</option>
