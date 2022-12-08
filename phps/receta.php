@@ -4,8 +4,8 @@ require './db.php';
 
 $id = $_GET['id'];
 $recipe = $database->get("tb_recipes", [
-  "[><]tb_recipes_category" => ["recipe_category_id" => "id_recipe_category"], 
-  "[><]tb_recipes_complex" => ["recipe_complex_id" => "id_recipe_complex"]
+  "[>]tb_recipes_category" => ["recipe_category_id" => "id_recipe_category"], 
+  "[>]tb_recipes_complex" => ["recipe_complex_id" => "id_recipe_complex"]
 ], [
   "tb_recipes.id_recipe",
   "tb_recipes.recipe_name",

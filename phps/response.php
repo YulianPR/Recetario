@@ -42,7 +42,7 @@
     
                 if(empty($errors)){
                     $img = "recipe-upload-".generateRandomString().".".$file_ext;
-                    move_uploaded_file($file_tmp, "images/".$img);
+                    move_uploaded_file($file_tmp, "img/fotos/".$img);
                 }
             }
         }

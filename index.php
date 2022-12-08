@@ -1,11 +1,6 @@
 <?php
 require './phps/db.php';
 
-//   [
-//     left join de categorias         
-//     "[>]tb_recipes_category"=>["recipe_category_id" => "id_recipe_category"]
-// ]
-
 $data = $database->select("tb_recipes", [
   "[>]tb_recipes_category" => ["recipe_category_id" => "id_recipe_category"]
 ], [
@@ -141,25 +136,42 @@ $data = $database->select("tb_recipes", [
     <div id="category-carousel" class="carousel multiple-item-carousel" data-bs-ride="false" data-bs-interval="false" data-bs-pause="true">
       <h3 class="text-start" id="seccion-tips">Ocasiones</h3>
       <div class="carousel-inner">
+        
         <div class="carousel-item active">
+          <a href="./phps/recetas.php">
+          <img src="./img/Navidad.jpg" class="img-fluid img-photo" alt="">
+          <h4>Cumpleaños</h4>
+          </a>        
+        </div>
+        <div class="carousel-item ">
+          <a href="./phps/recetas.php"> 
+          <img src="./img/Holloween.jpg" class="img-fluid img-photo" alt="">
+          <h4>Día del padre</h4>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="./phps/recetas.php">
+          <img src="./img/Cumple.jpg" class="img-fluid img-photo" alt="">
+          <h4>Día de la madre</h4>
+          </a>
+        </div>
+        <div class="carousel-item ">
+          <a href="./phps/recetas.php">
+          <img src="./img/Holloween.jpg" class="img-fluid img-photo" alt="">
+          <h4>Día del niño</h4>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="./phps/recetas.php">
+          <img src="./img/Cumple.jpg" class="img-fluid img-photo" alt="">
+          <h4>Navidad</h4>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="./phps/recetas.php">
           <img src="./img/Navidad.jpg" class="img-fluid img-photo" alt="">
           <h4>Navidad</h4>
-        </div>
-        <div class="carousel-item ">
-          <img src="./img/Holloween.jpg" class="img-fluid img-photo" alt="">
-          <h4>Halloween</h4>
-        </div>
-        <div class="carousel-item">
-          <img src="./img/Cumple.jpg" class="img-fluid img-photo" alt="">
-          <h4>Cumpleaños</h4>
-        </div>
-        <div class="carousel-item ">
-          <img src="./img/Holloween.jpg" class="img-fluid img-photo" alt="">
-          <h4>Halloween</h4>
-        </div>
-        <div class="carousel-item">
-          <img src="./img/Cumple.jpg" class="img-fluid img-photo" alt="">
-          <h4>Cumpleaños</h4>
+          </a>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#category-carousel" data-bs-slide="prev">

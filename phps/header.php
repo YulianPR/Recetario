@@ -18,6 +18,10 @@
             <li class="nav-item">
               <a class="nav-link" href="#seccion-tips">Ocaciones</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/phps/registro-recetas.php">Registro</a>
+              
+            </li>
           </ul>
         </div>
       </div>

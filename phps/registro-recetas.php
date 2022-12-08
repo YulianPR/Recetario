@@ -1,14 +1,22 @@
-<?php 
-   require 'db.php';
+<?php
+require 'db.php';
+$categories = $database->select("tb_recipes_category", "*");
+$ocaciones = $database->select("tb_recipes_accasion", "*");
+$recipes = $database->select("tb_recipes", "*");
 
-   $data= $database->select("tb_recipes",[
-    "[>]tb_recipes_category"=>["id_recipe_category" => "id_recipe_category"]
-],[
-    "tb_recipes.id_recipe",
-    "tb_recipes.recipe_name",
-    "tb_recipes.recipe_time",
-    "tb_recipes_category.recipe_category"
-]);
+// $recipes = $database->select("tb_recipes", [
+//   "[>]tb_recipes_category" => ["id_recipe_category" => "id_recipe_category"],
+//   "[>]tb_recipes_complex" => ["id_recipe_complex" => "id_recipe_complex"],
+//   "[>]tb_occasion" => ["id_recicpe_occasion" => "id_recicpe_occasion"]
+// ], [
+//   "tb_recipes.id_recipe",
+//   "tb_recipes.recipe_name",
+//   "tb_recipes.recipe_time",
+//   "tb_recipes.recipe_image",
+//   "tb_recipes_category.recipe_category",
+//   "tb_recipes_complex.recipe_complex",
+//   "tb_occasion.recipe_occasion"
+// ]);
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +33,7 @@
 </head>
 
 <body>
-<?php include './header.php'; ?>
+  <?php include './header.php'; ?>
   <!-- img -->
   <div class="container-fluid me-5">
     <table class="table table-dark">
@@ -39,50 +47,62 @@
           <th scope="col">Ocasión</th>
           <th scope="col">IMG</th>
           <th scope="col">Opciones</th>
-          
+
         </tr>
       </thead>
       <form>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            
+
+          <?php
+         foreach ($recipes as $recipe) {
+            echo "<tr>
+            <td>" . $recipe["id_recipe"] . "</td>
+            <td>" . $recipe["recipe_name"] . "</td>
+            <td>" . $recipe["recipe_complex_id"] . "</td>
+            <td>" . $recipe["recipe_category_id"] . "</td>
+            <td>" . $recipe["recipe_occasion_id"] . "</td>
+            <td>" . $recipe["recipe_image"] . "</td>
+            <td><a href='edit.php?id=" . $recipe["id_recipe"] . "'>Edit</a>/<a href='delete.php?id=" . $recipe["id_recipe"] . "'>Delete</a></td>
+            </tr>";
+          }
+          ?>
+
+          <!-- <tr>
+            <td>1</td>
             <td>Pollo</td>
             <td>Media</td>
             <td>Desayuno</td>
             <td>Cumpleaños</td>
             <td>img</td>
-            <td><a href='edit.php?id=".$data[$i]["id_recipe"]."'>Edit</a>/<a href= 'delete.php?id=".$data[$i]["id_recipe"]."'>Delete</a></td>
-            
+            <td><a href='edit.php?id=".$data[$i]["id_recipe"]."'>Edit</a>/<a href='delete.php?id=".$data[$i]["id_recipe"]."'>Delete</a></td>
+
           </tr>
           <tr>
-            <th scope="row">2</th>
-            
+            <td>1</td>
             <td>Hanbusguesa</td>
             <td>Alta</td>
             <td>Desayuno</td>
             <td>Navidad</td>
             <td>img</td>
-            <td><a href='edit.php?id=".$data[$i]["id_recipe"]."'>Edit</a>/<a href= 'delete.php?id=".$data[$i]["id_recipe"]."'>Delete</a></td>
-           
+            <td><a href='edit.php?id=".$data[$i]["id_recipe"]."'>Edit</a>/<a href='delete.php?id=".$data[$i]["id_recipe"]."'>Delete</a></td>
+
           </tr>
           <tr>
-            <th scope="row">3</th>
-            
+            <td>1</td>
             <td>Pasta</td>
             <td>Media</td>
             <td>Desayuno</td>
             <td>Halloween</td>
             <td>img</td>
-            <td><a href='edit.php?id=".$data[$i]["id_recipe"]."'>Edit</a>/<a href= 'delete.php?id=".$data[$i]["id_recipe"]."'>Delete</a></td>
-          
+            <td><a href='edit.php?id=".$data[$i]["id_recipe"]."'>Edit</a>/<a href='delete.php?id=".$data[$i]["id_recipe"]."'>Delete</a></td>
+
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </form>
     </table>
-  </div>  
-  <a href='add.php'>Agregar</a>
+  </div>
+  <!-- <a href='add.php'>Agregar</a> -->
 </body>
 
 </html>
