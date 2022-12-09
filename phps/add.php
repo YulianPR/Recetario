@@ -2,6 +2,29 @@
     require 'db.php';
 
     $data = $database->select("tb_recipes","*");
+    //verificar los envíos de formularios
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $nombre = $_POST['nombre'];
+        $complejidad = $_POST['complejidad'];
+        $categoria = $_POST['categoria'];
+        $ocasion = $_POST['ocasion'];
+        $ingredientes = $_POST['ingredientes'];
+        $preparacion = $_POST['preparacion'];
+        $descripcion = $_POST['descripcion'];
+        $imagen = "recipe-placeholder.png";
+
+        $database->insert("tb_recipes",[
+            "recipe_name"=>$nombre,
+            "id_recipe_complex"=>$complejidad,
+            "id_recipe_category"=>$categoria,
+            "id_recipe_occasion"=>$ocasion,
+            "recipe_ingredients"=>$ingredientes,
+            "recipe_preparation"=>$preparacion,
+            "recipe_description"=>$descripcion,
+            "recipe_image"=>$imagen
+        ]);
+        header("location: registro-recetas.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +51,7 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <form action="response.php" method="POST">
+          <form action="add.php" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre de la receta</label>
               <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la receta">
@@ -36,31 +59,32 @@
             <div class="mb-3">
               <label for="inputGroupFile01" class="form-label">Complejidad</label>
               <select name="complejidad" id="complejidad">
-                <option value="Fácil">Fácil</option>
-                <option value="Medio">Medio</option>
-                <option value="Medio">Difícil</option>
+                <option value="1">Fácil</option>
+                <option value="2">Medio</option>
+                <option value="3">Difícil</option>
+                <option value="4">Avanzado</option>
             </select>
             </div>
             <div class="mb-3">
               <label for="inputGroupFile01" class="form-label">Categoria</label>
               <select name="categoria" id="categoria">
-                <option value="Desayuno">Desayuno</option>
-                <option value="Almuerzo">Almuerzo</option>
-                <option value="Sopas">Sopas</option>
-                <option value="Bebidas">Bebidas</option>
-                <option value="Postres">Postres</option>
+                <option value="1">breakfast</option>
+                <option value="2">Lunch</option>
+                <option value="3">Soups</option>
+                <option value="4">Drinks</option>
+                <option value="5">Desserts</option>
+                <option value="6">Entrees</option>
             </select>
             </div>
             <div class="mb-3">
               <label for="inputGroupFile01" class="form-label">Ocasión</label>
               <select name="ocasion" id="ocasion">
-                <option value="Cumpleaños">Cumpleaños</option>
-                <option value="Día del padre">Día del padre</option>
-                <option value="Día de la madre">Día de la madre</option>
-                <option value="Día del niño">Día del niño</option>
-                <option value="Navidad">Navidad</option>
-                <option value="Semana Santa">Semana Santa</option>
-                <option value="Verano">Verano</option>
+                <option value="1">Cumpleaños</option>
+                <option value="2">Día del padre</option>
+                <option value="3">Día de la madre</option>
+                <option value="4">Día del niño</option>
+                <option value="5">Navidad</option>
+                <option value="6">Verano</option>
             </select>
             <div class="mb-3">
               <label for="ingredientes" class="form-label">Ingredientes</label>
@@ -69,6 +93,10 @@
             <div class="mb-3">
               <label for="preparacion" class="form-label">Preparación</label>
               <textarea class="form-control" id="preparacion" name="preparacion" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripción</label>
+              <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
             </div>
             <div class="mb-3">
               <label for="imagen" class="form-label">Imagen</label>

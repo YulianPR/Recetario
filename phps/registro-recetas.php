@@ -1,22 +1,26 @@
 <?php
 require 'db.php';
-$categories = $database->select("tb_recipes_category", "*");
-$ocaciones = $database->select("tb_recipes_accasion", "*");
-$recipes = $database->select("tb_recipes", "*");
+ 
 
-// $recipes = $database->select("tb_recipes", [
-//   "[>]tb_recipes_category" => ["id_recipe_category" => "id_recipe_category"],
-//   "[>]tb_recipes_complex" => ["id_recipe_complex" => "id_recipe_complex"],
-//   "[>]tb_occasion" => ["id_recicpe_occasion" => "id_recicpe_occasion"]
-// ], [
-//   "tb_recipes.id_recipe",
-//   "tb_recipes.recipe_name",
-//   "tb_recipes.recipe_time",
-//   "tb_recipes.recipe_image",
-//   "tb_recipes_category.recipe_category",
-//   "tb_recipes_complex.recipe_complex",
-//   "tb_occasion.recipe_occasion"
-// ]);
+$recipes = $database->select("tb_recipes", [
+  "[><]tb_recipes_category" => ["id_recipe_category" => "id_recipe_category"],
+  "[><]tb_recipes_complex" => ["id_recipe_complex" => "id_recipe_complex"],
+  "[><]tb_occasion" => ["id_recipe_occasion" => "id_recipe_occasion"]
+], [
+  "tb_recipes.id_recipe",
+  "tb_recipes.recipe_name",
+  "tb_recipes.recipe_time",
+  "tb_recipes.recipe_image",
+  "tb_recipes_category.recipe_category",
+  "tb_recipes_complex.recipe_complex",
+  "tb_occasion.recipe_occasion",
+],
+
+[
+  "ORDER" => ["tb_recipes.id_recipe" => "DESC"]
+]);
+
+//https://stackoverflow.com/questions/66573776/use-order-with-medoo
 
 ?>
 <!DOCTYPE html>
@@ -58,9 +62,9 @@ $recipes = $database->select("tb_recipes", "*");
             echo "<tr>
             <td>" . $recipe["id_recipe"] . "</td>
             <td>" . $recipe["recipe_name"] . "</td>
-            <td>" . $recipe["recipe_complex_id"] . "</td>
-            <td>" . $recipe["recipe_category_id"] . "</td>
-            <td>" . $recipe["recipe_occasion_id"] . "</td>
+            <td>" . $recipe["recipe_complex"] . "</td>
+            <td>" . $recipe["recipe_category"] . "</td>
+            <td>" . $recipe["recipe_occasion"] . "</td>
             <td>" . $recipe["recipe_image"] . "</td>
             <td><a href='edit.php?id=" . $recipe["id_recipe"] . "'>Edit</a>/<a href='delete.php?id=" . $recipe["id_recipe"] . "'>Delete</a></td>
             </tr>";
@@ -102,7 +106,7 @@ $recipes = $database->select("tb_recipes", "*");
       </form>
     </table>
   </div>
-  <!-- <a href='add.php'>Agregar</a> -->
+  <a href='add.php'>Agregar</a>
 </body>
 
 </html>

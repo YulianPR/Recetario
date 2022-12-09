@@ -1,7 +1,9 @@
 <?php
     require 'db.php';
 
-    $categories = $database->select("tb_recipes","*");
+    $categories = $database->select("tb_recipes_category","*");
+    $complex = $database->select("tb_recipes_complex","*");
+    $occasion = $database->select("tb_occasion","*");
 
 if(isset($_GET)){
     $data = $database->select("tb_recipes", "*", [
@@ -29,41 +31,60 @@ if(isset($_GET)){
    <form action="update.php" method="post" enctype="multipart/form-data<">
 
     <label for="recipe">Receta</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la receta">
+    <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $data[0]["recipe_name"]; ?>">
     <label for="inputGroupFile01" class="form-label">Complejidad</label>
-            <select name="" id="">
-                <option value="Fácil">Fácil</option>
-                <option value="Medio">Medio</option>
-                <option value="Medio">Difícil</option>
+            <select name="complex" id="">
+            <?php 
+                $len = count($complex);
+                for($i=0; $i < $len; $i++) {
+                    if($data[0]["id_recipe_complex"] == $complex[$i]['id_recipe_complex']){
+                        echo '<option value="'.$complex[$i]['id_recipe_complex'].'" selected>'.$complex[$i]['recipe_complex'].'</option>';
+                    }else{
+                        echo '<option value="'.$complex[$i]['id_recipe_complex'].'">'.$complex[$i]['recipe_complex'].'</option>';
+                    }                  
+                }
+            ?>
             </select>
     <label for="inputGroupFile01" class="form-label">Categoria</label>
-              <select name="" id="">
-                <option value="Desayuno">Desayuno</option>
-                <option value="Almuerzo">Almuerzo</option>
-                <option value="Sopas">Sopas</option>
-                <option value="Bebidas">Bebidas</option>
-                <option value="Postres">Postres</option>
+              <select name="category" id="">
+              <?php 
+                $len = count($categories);
+                for($i=0; $i < $len; $i++) {
+                    if($data[0]["id_recipe_category"] == $categories[$i]['id_recipe_category']){
+                        echo '<option value="'.$categories[$i]['id_recipe_category'].'" selected>'.$categories[$i]['recipe_category'].'</option>';
+                    }else{
+                        echo '<option value="'.$categories[$i]['id_recipe_category'].'">'.$categories[$i]['recipe_category'].'</option>';
+                    }
+                    
+                }
+            ?>
             </select>
     <label for="inputGroupFile01" class="form-label">Ocasión</label>
-            <select name="" id="">
-                <option value="Cumpleaños">Cumpleaños</option>
-                <option value="Día del padre">Día del padre</option>
-                <option value="Día de la madre">Día de la madre</option>
-                <option value="Día del niño">Día del niño</option>
-                <option value="Navidad">Navidad</option>
-                <option value="Semana Santa">Semana Santa</option>
-                <option value="Verano">Verano</option>
+            <select name="occasion" id="">
+            <?php 
+                $len = count($occasion);
+                for($i=0; $i < $len; $i++) {
+                    if($data[0]["id_recipe_occasion"] == $occasion[$i]['id_recipe_occasion']){
+                        echo '<option value="'.$occasion[$i]['id_recipe_occasion'].'" selected>'.$occasion[$i]['recipe_occasion'].'</option>';
+                    }else{
+                        echo '<option value="'.$occasion[$i]['id_recipe_occasion'].'">'.$occasion[$i]['recipe_occasion'].'</option>';
+                    }
+                    
+                }
+            ?>
             </select>
+            <div class="mb-3">
     <label for="ingredientes" class="form-label">Ingredientes</label>
-              <textarea class="form-control" id="ingredientes" name="ingredientes" rows="3"></textarea>
+              <textarea class="form-control" id="ingredientes" name="ingredientes" rows="3"><?php echo $data[0]["recipe_ingredients"]; ?></textarea>
             </div>
             <div class="mb-3">
     <label for="preparacion" class="form-label">Preparación</label>
-              <textarea class="form-control" id="preparacion" name="preparacion" rows="3"></textarea>
+              <textarea class="form-control" id="preparacion" name="preparacion" rows="3"><?php echo $data[0]["recipe_preparation"]; ?></textarea>
             </div>
     <label for="time">Tiempo de Prep.</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tiempo de Preparación">
+    <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $data[0]["recipe_time"]; ?>">
     <br>
+
 
     <label for="recipe_image">Imagen principal</label>
     <input type="file" class="form-control" id="imagen" name="imagen">
@@ -86,5 +107,8 @@ if(isset($_GET)){
         }
 
     </script>
+
+
+
 </body>
 </html>

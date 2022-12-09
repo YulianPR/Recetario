@@ -2,7 +2,7 @@
 require './phps/db.php';
 
 $data = $database->select("tb_recipes", [
-  "[>]tb_recipes_category" => ["recipe_category_id" => "id_recipe_category"]
+  "[>]tb_recipes_category" => ["id_recipe_category" => "id_recipe_category"]
 ], [
   "tb_recipes.id_recipe",
   "tb_recipes.recipe_name",
